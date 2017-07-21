@@ -1,0 +1,107 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Instagram_Clone(login)</title>
+<style>
+
+
+
+body{
+
+     background-image: url("{% static "lol.png"%}");
+      background-size: cover;
+      text-align: center;
+
+
+     }
+
+.box{
+
+    width: 200px;
+    height:180px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, .6);
+
+
+}
+
+
+.box1{
+
+    width: 200px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, .6);
+
+    }
+
+
+ input[type="submit"] {
+      background: blue;
+      color: white;
+      padding:5px,5px;
+    }
+
+
+  .lol{
+
+     position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:80px;
+   background-color:black;
+   text-align: center;
+   color: red;
+}
+
+</style>
+</head>
+<body>
+
+<div class="lol">
+ <h1>Insta Clone</h1>
+
+</div><br><br><br><br><br><br>
+
+
+
+<div class="box">
+
+        <form method="post">
+            {% csrf_token %}
+
+
+
+	   <div>
+                      <h3>Login</h3>
+	     </div>
+
+            <div>
+
+                <input id="username" type="text" placeholder="Username" name="username" value={{ username }}>
+            </div><br>
+
+
+             <div>
+
+                <input id="password" type="password" placeholder="Password" name="password" value={{ password }}>
+            </div><br>
+
+
+                <input type="submit" value="Log In">
+        </form>
+
+
+</div><br>
+
+
+<div class="box1">
+
+    <div><h4>Don't have an account<a href="/signup/">Sign Up</a> </h4></div>
+
+</div>
+</body>
+</html>

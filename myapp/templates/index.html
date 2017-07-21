@@ -1,0 +1,114 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Clone</title>
+  <style>
+
+
+    body{
+
+
+    background-image: url("{% static "inst.png"%}");
+      background-size: cover;
+      text-align: center;
+      color: white;
+      }
+
+
+
+.box {
+    float: right;
+    width: 250px;
+    height: 200px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+
+.box1{
+    float: right;
+    width: 200px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+
+.box0 {
+    float: right;
+    width: 350px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, .0);
+
+
+         input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+
+    input[type="submit"] {
+      background: red;
+      color: white;
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+            <h1> Instagram Clone</h1>
+            <h3>Sign Up</h3>
+    </div><br><br>
+
+<div class="box0">
+<div class="box">
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+
+            <div>
+
+                <input id="username" type="text" placeholder="Username" name="username" value={{ username }}>
+            </div><br>
+
+            <div>
+
+                <input id="name" type="text" placeholder="Name" name="name" value={{ name }}>
+            </div><br>
+
+             <div>
+
+                <input id="email" type="text" placeholder="Email" name="email" value={{ email }}>
+            </div><br>
+
+
+
+            <div>
+
+                <input id="password" type="password" placeholder="Password" name="password" value={{ password }}>
+            </div></br>
+
+                <input type="submit" value="Sign Up">
+        </form>
+</div>
+
+
+    </div><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="box1">
+
+    <div><h3>Already a user?</h3><a href="/login/">Login</a> </div>
+
+</div>
+</div>
+
+
+</body>
+</html>
