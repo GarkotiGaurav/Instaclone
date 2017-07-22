@@ -24,7 +24,6 @@ from imgurpython import ImgurClient
 
 ci = "601a283fd32edcf"
 cs = "d9d2692a079a69f2b2f1a04dee7703fa61a30e62"
-key= "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"
 KEY = "dac538e2ff8640648ef8d78d0b51e5ce"
 
 
