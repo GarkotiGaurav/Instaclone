@@ -50,11 +50,7 @@
             <input type="submit" class="btn-default btn" value="Create Post">
         </form>
 
-        <form method="post" action="/login/">
-            {% csrf_token %}
-
-            <input type="submit" value="Log Out">
-        </form>
+        <a href="{%url 'logout'%}">Log out</a>
 
 </div><br><br><br><br>
 
